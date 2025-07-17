@@ -139,7 +139,7 @@ The goal of this application was to build a web-based chat interface that demons
 
 This Real-Time Chat Application demonstrates how modern web development practices can be applied to create an engaging, interactive, and professional-grade messaging platform using only client-side technologies. It balances design aesthetics with technical implementation and provides a scalable foundation for future development, including real-time backend integration and user management systems.
 
-##OUTPUT
+## 💻	OUTPUT
 
 ![Image](https://github.com/user-attachments/assets/1a6ec673-9fdf-4b1f-befa-fd6a03c114a8)
 <img width="1600" height="730" alt="Image" src="https://github.com/user-attachments/assets/4214a330-5640-4266-86a4-e8c14396a2ba" />
