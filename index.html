@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="app-logo">
+                    <i class="fas fa-comments"></i>
+                    <h2>ChatApp</h2>
+                </div>
+                <div class="user-profile">
+                    <div class="avatar">
+                        <img src="i.4.jpeg" alt="Your Avatar" id="user-avatar">
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="user-info">
+                        <span class="username" id="current-username">You</span>
+                        <span class="user-status">Online</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="online-users">
+                <div class="section-header">
+                    <i class="fas fa-users"></i>
+                    <span>Online Users</span>
+                    <span class="user-count" id="online-count">4</span>
+                </div>
+                <div class="users-list" id="users-list">
+                    <!-- Users will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="chat-rooms">
+                <div class="section-header">
+                    <i class="fas fa-hashtag"></i>
+                    <span>Rooms</span>
+                </div>
+                <div class="rooms-list">
+                    <div class="room-item active">
+                        <i class="fas fa-hashtag"></i>
+                        <span>General</span>
+                        <div class="unread-count">3</div>
+                    </div>
+                    <div class="room-item">
+                        <i class="fas fa-hashtag"></i>
+                        <span>Random</span>
+                    </div>
+                    <div class="room-item">
+                        <i class="fas fa-hashtag"></i>
+                        <span>Tech Talk</span>
+                        <div class="unread-count">1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main-chat">
+            <!-- Chat Header -->
+            <div class="chat-header">
+                <div class="chat-info">
+                    <div class="room-avatar">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-name">General</h3>
+                        <span class="room-members">4 members online</span>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <button class="action-btn" title="Voice Call">
+                        <i class="fas fa-phone"></i>
+                    </button>
+                    <button class="action-btn" title="Video Call">
+                        <i class="fas fa-video"></i>
+                    </button>
+                    <button class="action-btn" title="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="action-btn" title="Settings">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Messages Area -->
+            <div class="messages-container" id="messages-container">
+                <div class="messages-list" id="messages-list">
+                    <!-- Messages will be populated by JavaScript -->
+                </div>
+                
+                <!-- Typing Indicator -->
+                <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                    <div class="typing-avatar">
+                        <img src="i.5.jpeg" alt="User">
+                    </div>
+                    <div class="typing-content">
+                        <span class="typing-user" id="typing-user">Someone</span>
+                        <div class="typing-animation">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message Input -->
+            <div class="message-input-container">
+                <div class="input-wrapper">
+                    <button class="input-action" title="Attach File">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <div class="message-input">
+                        <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off">
+                        <button class="emoji-btn" title="Add Emoji">
+                            <i class="fas fa-smile"></i>
+                        </button>
+                    </div>
+                    <button class="send-btn" id="send-btn" title="Send Message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="input-hint">
+                    Press Enter to send • Shift + Enter for new line
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Sound -->
+    <audio id="notification-sound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
